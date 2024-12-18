@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stretch Image</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh; /* Full height of the viewport */
+            display: flex;
+        }
+        img {
+            width: 100%; /* Stretch the image to the full width */
+            height: 100%; /* Stretch the image to the full height */
+            object-fit: contain; /* Maintains the aspect ratio while filling the viewport */
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <img id="randomImage" alt="Random Image">
+        <script>
+            // Array of image file paths
+            const images = [
+                "biden-debate.gif",
+                "confused-what.gif",
+                "giphy.gif",
+                "x-files-gif-fox-mulder.gif"
+            ];
+    
+            // Select a random image
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const randomImage = images[randomIndex];
+    
+            // Set the src attribute of the img element
+            document.getElementById('randomImage').src = randomImage;
+        </script>
+</body>
+</html>
